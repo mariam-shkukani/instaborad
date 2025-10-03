@@ -15,6 +15,8 @@ InstaBoard is a React application that displays a list of user profile cards fet
 - Dark/Light mode toggle.
 - Responsive grid layout.
 
+---
+
 ### Questions  
 
 - How many hours did it take you to complete this assignment?
