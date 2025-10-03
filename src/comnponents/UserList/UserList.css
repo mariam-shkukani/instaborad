@@ -1,0 +1,26 @@
+.userlist{
+  max-width:1100px;
+  margin:20px auto;
+  padding:0 16px;
+}
+.userlist__controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:14px;
+}
+.userlist__search{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.08);
+  flex:1;
+}
+.userlist__grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap:14px;
+}
+.userlist__footer{
+  margin-top:18px;
+  text-align:center;
+}

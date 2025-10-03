@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import UserList from './comnponents/UserList/UserList';
 import './App.css';
 
 function App() {
+  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app__header">
+        <h1>InstaBoard</h1>
+        <div>
+          <button className="btn" onClick={() => setDark(d => !d)}>
+            {dark ? '☀️ Light' : '🌙 Dark'}
+          </button>
+        </div>
       </header>
+
+      <main>
+        <UserList />
+      </main>
+
+      <footer className="app__footer">
+        <small>Made By ❤️ — Mariam Shkukani</small>
+      </footer>
     </div>
   );
 }
