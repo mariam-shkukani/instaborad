@@ -1,0 +1,22 @@
+
+.usercard{
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 13px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.usercard__img{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:2px solid rgba(0,0,0,0.06);
+}
+.usercard__body{ flex:1; }
+.usercard__name{ margin:0; font-size:1rem; }
+.usercard__email{ margin:6px 0; color:var(--muted); font-size:0.7rem; }
+.usercard__actions{ display:flex; gap:8px; margin-top:8px; }
